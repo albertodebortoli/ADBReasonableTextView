@@ -59,6 +59,7 @@
 		F0364BD119282E1100448B27 /* ADBCursoredText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADBCursoredText.m; path = Source/ADBCursoredText.m; sourceTree = "<group>"; };
 		F0364BD219282E1100448B27 /* ADBReasonableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ADBReasonableTextView.h; path = Source/ADBReasonableTextView.h; sourceTree = "<group>"; };
 		F0364BD319282E1100448B27 /* ADBReasonableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ADBReasonableTextView.m; path = Source/ADBReasonableTextView.m; sourceTree = "<group>"; };
+		F0364BDA19282EF100448B27 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 		F0364B5E1928100700448B27 = {
 			isa = PBXGroup;
 			children = (
+				F0364BDA19282EF100448B27 /* README.md */,
 				F0364BCF19282DE900448B27 /* Source */,
 				F0364B701928100700448B27 /* ADBReasonableTextView */,
 				F0364B8F1928100800448B27 /* ADBReasonableTextViewTests */,
