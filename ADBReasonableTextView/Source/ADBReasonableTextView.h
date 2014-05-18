@@ -13,6 +13,7 @@
 
 @protocol ADBReasonableTextViewDelegate <NSObject>
 
+@optional
 - (void)reasonableTextView:(ADBReasonableTextView *)textView
             willChangeText:(ADBCursoredText *)currentText
                     toText:(ADBCursoredText *)finalText
@@ -29,18 +30,24 @@
         didChangeSelection:(NSRange)previousSelection
                toSelection:(NSRange)finalSelection;
 
+- (void)reasonableTextViewDidBeginEditing:(ADBReasonableTextView *)textView;
+- (void)reasonableTextViewDidEndEditing:(ADBReasonableTextView *)textView;
+
 @end
 
 @protocol ADBReasonableTextViewDataSource <NSObject>
 
+@optional
 - (BOOL)reasonableTextView:(ADBReasonableTextView *)textView
           shouldChangeText:(ADBCursoredText *)currentText
                     toText:(ADBCursoredText *)finalText
           substitutionText:(NSString *)substitutionText
                      range:(NSRange)range;
 
-- (BOOL)reasonableTextView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange;
-- (BOOL)reasonableTextView:(UITextView *)textView shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)characterRange;
+- (BOOL)reasonableTextView:(ADBReasonableTextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange;
+- (BOOL)reasonableTextView:(ADBReasonableTextView *)textView shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)characterRange;
+- (BOOL)reasonableTextViewShouldBeginEditing:(ADBReasonableTextView *)textView;
+- (BOOL)reasonableTextViewShouldEndEditing:(ADBReasonableTextView *)textView;
 
 @end
 

@@ -42,22 +42,34 @@
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView
 {
-    return YES;
+    BOOL retVal = YES;
+    if ([self.reasonableDataSource respondsToSelector:@selector(reasonableTextViewShouldBeginEditing:)]) {
+        [self.reasonableDataSource reasonableTextViewShouldBeginEditing:self];
+    }
+    return retVal;
 }
 
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView
 {
-    return YES;
+    BOOL retVal = YES;
+    if ([self.reasonableDataSource respondsToSelector:@selector(reasonableTextViewShouldEndEditing:)]) {
+        [self.reasonableDataSource reasonableTextViewShouldEndEditing:self];
+    }
+    return retVal;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    // no-op
+    if ([self.reasonableDelegate respondsToSelector:@selector(reasonableTextViewDidBeginEditing:)]) {
+        [self.reasonableDelegate reasonableTextViewDidBeginEditing:self];
+    }
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
-    // no-op
+    if ([self.reasonableDelegate respondsToSelector:@selector(reasonableTextViewDidEndEditing:)]) {
+        [self.reasonableDelegate reasonableTextViewDidEndEditing:self];
+    }
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
