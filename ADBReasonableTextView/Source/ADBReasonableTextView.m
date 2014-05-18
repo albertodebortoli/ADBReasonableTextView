@@ -20,6 +20,11 @@
 
 #pragma mark - Public Methods
 
+- (void)setDelegate:(id<UITextViewDelegate>)delegate
+{
+    [super setDelegate:self];
+}
+
 - (void)setReasonableDelegate:(id<ADBReasonableTextViewDelegate>)reasonableDelegate
 {
     self.delegate = self;
