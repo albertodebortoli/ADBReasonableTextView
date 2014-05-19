@@ -22,6 +22,9 @@ A UITextView replacement with reasonable delegate methods.
         didChangeSelection:(NSRange)previousSelection
                toSelection:(NSRange)finalSelection;
 
+- (void)reasonableTextViewDidBeginEditing:(ADBReasonableTextView *)textView;
+- (void)reasonableTextViewDidEndEditing:(ADBReasonableTextView *)textView;
+
 @end
 ```
 
@@ -36,6 +39,8 @@ A UITextView replacement with reasonable delegate methods.
 
 - (BOOL)reasonableTextView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange;
 - (BOOL)reasonableTextView:(UITextView *)textView shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)characterRange;
+- (BOOL)reasonableTextViewShouldBeginEditing:(ADBReasonableTextView *)textView;
+- (BOOL)reasonableTextViewShouldEndEditing:(ADBReasonableTextView *)textView;
 
 @end
 ```
