@@ -1,5 +1,5 @@
-ADBReasonableTextView [WIP]
-===========================
+ADBReasonableTextView
+=====================
 
 A UITextView replacement with reasonable delegate methods. 
 

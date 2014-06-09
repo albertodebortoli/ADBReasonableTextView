@@ -1,6 +1,7 @@
 //
 //  ADBCursoredText.h
 //  ADBReasonableTextView
+//  v1.0.1
 //
 //  Created by Alberto De Bortoli on 18/05/2014.
 //  Copyright (c) 2014 Alberto De Bortoli. All rights reserved.
